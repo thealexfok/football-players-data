@@ -150,7 +150,7 @@ def get_player_info(url,simple=False):
 def get_players_info_from_league(url):
     playersurl = get_players_url_from_league(url)
     playerlist = []
-    for link in playersurl[:4]:
+    for link in playersurl:
         current_player_info = get_player_info(link)
         print("Adding "+current_player_info["player_name"]+" from " +current_player_info["club"])
         playerlist.append(current_player_info)
